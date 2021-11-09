@@ -1,0 +1,78 @@
+.pricing {
+   width: 100%;
+   height: 100%;
+   background-color: $base-color;
+   padding: 10rem 0;
+
+   .pricing-card_holder {
+      width: 100%;
+      margin-top: 8.5rem;
+      @include display-flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8rem;
+
+      .pricing-card_box {
+         background-color: $white-color;
+         @include display-flex;
+         flex-direction: column;
+         gap: 2.6rem;
+         width: 37.5rem;
+         padding: 5rem 0;
+         border-radius: 0.75rem;
+
+         .pricing-card_title {
+            font-size: fontSize(class-title);
+            font-family: $header-font;
+            color: $base-color;
+         }
+         .pricing_card_price {
+            font-size: fontSize(class-title);
+            font-family: $header-font;
+            color: $base-color;
+         }
+         .pricing_card_desc {
+            color: $base-color;
+            font-size: fontSize(pricing-desc);
+            text-align: center;
+         }
+         .btn-pricing-card {
+            padding: 1rem 7.5rem;
+            background-color: $base-color;
+            color: $white-color;
+            font-size: fontSize(footer-desc);
+            font-family: $header-font;
+            text-transform: uppercase;
+            &:hover {
+               background-color: $menu-hover-color;
+               color: $base-color;
+               @include transition-ease-in-out;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 1023px) {
+   .pricing {
+      .container-pricing {
+         .heading_title {
+            .pricing--subtitle {
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .pricing {
+      .pricing-card_holder {
+         .pricing-card_box {
+            width: 30rem;
+            .btn-pricing-card {
+               padding: 1rem 4rem;
+            }
+         }
+      }
+   }
+}

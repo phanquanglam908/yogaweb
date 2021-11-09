@@ -1,0 +1,90 @@
+.choose-classes {
+   height: 100%;
+   width: 100%;
+   padding-bottom: 13rem;
+   background-color: $base-color;
+
+   .container-classes {
+      @include display-flex;
+      justify-content: center;
+      padding-top: 7rem;
+      padding-bottom: 5rem;
+   }
+
+   .choose-classes_class-holder {
+      @include display-flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      .class-box {
+         @include display-flex;
+         flex-direction: column;
+         justify-content: center;
+         &_img {
+            position: relative;
+
+            .img-class {
+               position: absolute;
+               top: 4.6rem;
+               left: 4.7rem;
+               width: 29rem;
+               height: 29rem;
+               object-fit: cover;
+            }
+         }
+         &_content {
+            @include display-flex;
+            flex-direction: column;
+            gap: 2rem;
+            .class-name {
+               font-size: fontSize(class-title);
+               font-family: $header-font;
+               color: $white-color;
+            }
+            .class-name-desc {
+               font-size: fontSize(class-subtitle);
+               color: $white-color;
+               width: 70%;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 1023px) {
+   .choose-classes {
+      .container-classes {
+         .heading_title {
+            .heading_title--h1 {
+               z-index: 2;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .choose-classes {
+      .choose-classes_class-holder {
+         gap: 3rem;
+         .class-box {
+            &_img {
+               position: relative;
+               .shape3 {
+                  height: auto;
+                  width: 30rem;
+               }
+
+               .img-class {
+                  position: absolute;
+                  top: 3.1rem;
+                  left: 3.2rem;
+                  width: 24rem;
+                  height: auto;
+               }
+            }
+         }
+      }
+   }
+}

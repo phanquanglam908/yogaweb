@@ -1,0 +1,106 @@
+@import "./variables";
+@import "./mixing";
+@import "./function";
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+body {
+   max-width: 1440px;
+   margin: 0 auto;
+   background-color: $bg-body-color;
+   font-family: $body-font;
+}
+.container {
+   max-width: 1410px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+@import "./header";
+@import "./sticky-menu";
+@import "./classes";
+.btn {
+   border: none;
+   padding: 0.2rem 3rem;
+   border-radius: 1rem;
+   cursor: pointer;
+}
+.heading_title {
+   @include display-flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 3.5rem;
+}
+.heading_title--h1 {
+   font-size: fontSize(heading);
+   font-family: $header-font;
+   color: $white-color;
+   z-index: 2;
+   text-align: center;
+}
+.heading_subtitle {
+   font-size: fontSize(sub-heading);
+   color: $white-color;
+   width: 60%;
+   text-align: center;
+   z-index: 2;
+}
+
+.scroll-up-btn {
+   position: fixed;
+   bottom: 3rem;
+   right: 2rem;
+   width: 4rem;
+   height: 4rem;
+   border-radius: 50%;
+   line-height: 4rem;
+   text-align: center;
+   background-color: $lighter-color;
+   z-index: 999;
+   & {
+      color: $base-color;
+      font-size: 3rem;
+      cursor: pointer;
+   }
+}
+@import "./stats";
+@import "./instructor";
+@import "./experience";
+@import "./pricing";
+@import "./trainer";
+@import "./subscribe";
+@import "./footer";
+
+@media screen and (max-width: 767px) {
+   .heading_title--h1 {
+      font-size: 50px;
+   }
+   .heading_subtitle {
+      line-height: 5rem;
+      width: 80%;
+      text-align: center;
+   }
+}
+@media screen and (max-width: 500px) {
+   .heading_subtitle {
+      line-height: 4rem;
+      width: 100%;
+   }
+}

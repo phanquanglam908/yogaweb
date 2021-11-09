@@ -1,0 +1,112 @@
+.instructor {
+   width: 100%;
+   height: 100%;
+   background-color: $base-color;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   align-items: center;
+   &_content-box {
+      padding-left: 7rem;
+
+      .instructor-title {
+         width: 60%;
+      }
+
+      .instructor-desc {
+         text-align: left;
+         width: 80%;
+         margin: 4rem 0;
+      }
+      .btn-instructor {
+         width: 32rem;
+         padding: 1rem 0;
+         border-radius: 0.75rem;
+         color: $base-color;
+         font-size: fontSize(footer-desc);
+         font-family: $header-font;
+         &:hover {
+            background-color: $menu-hover-color;
+            color: $white-color;
+            @include transition-ease-in-out;
+         }
+      }
+   }
+
+   &_img-box {
+      img {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+      }
+   }
+}
+@media screen and (max-width: 1023px) {
+   .instructor {
+      @include display-flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10rem 0;
+      gap: 5rem;
+      .instructor_content-box {
+         padding-left: 0;
+         @include display-flex;
+         flex-direction: column;
+         justify-content: center;
+
+         .instructor-title {
+            width: auto;
+         }
+
+         .instructor-desc {
+            text-align: center;
+            width: 80%;
+         }
+      }
+      .instructor_img-box {
+         img {
+            width: 65rem;
+            height: auto;
+            object-fit: cover;
+         }
+      }
+   }
+}
+@media screen and (max-width: 767px) {
+   .instructor {
+      .instructor_content-box {
+         .instructor-title {
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+         }
+
+         .instructor-desc {
+            line-height: 5rem;
+         }
+      }
+      .instructor_img-box {
+         img {
+            width: 45rem;
+            height: auto;
+            object-fit: cover;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .instructor {
+      padding-top: 10rem;
+      padding-bottom: 0;
+      .instructor_content-box {
+         .instructor-desc {
+            width: 100%;
+         }
+      }
+      .instructor_img-box {
+         img {
+            width: 100%;
+         }
+      }
+   }
+}

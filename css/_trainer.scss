@@ -1,0 +1,90 @@
+.trainer {
+   background: linear-gradient(rgba($white-color, 0.9), rgba($white-color, 0.9)), url(../img/bg-trainer.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 10rem 0;
+   height: 100%;
+   .container-trainer {
+      @include display-flex;
+      flex-direction: column;
+      gap: 2rem;
+      .trainer_img-box {
+         position: relative;
+
+         .trainer-img {
+            position: absolute;
+            top: 4.1rem;
+            left: 4.4rem;
+            border: 4px solid $base-color;
+            border-radius: 50%;
+            width: 32rem;
+         }
+      }
+      .trainer_content-box {
+         @include display-flex;
+         flex-direction: column;
+         .trainer_content-box_name {
+            font-size: fontSize(trainer-desc);
+            color: $base-color;
+         }
+         .trainer_content-box_desc {
+            font-size: fontSize(trainer-desc);
+            font-family: $desc-font;
+            color: $base-color;
+            width: 90%;
+            line-height: 8rem;
+            margin-bottom: 6rem;
+         }
+      }
+   }
+}
+@media screen and (max-width: 1023px) {
+   .trainer {
+      background-position: right;
+      .container-trainer {
+         .trainer_content-box {
+            .trainer_content-box_desc {
+               font-size: 52px;
+               width: 100%;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .trainer {
+      background-position: right;
+      .container-trainer {
+         .trainer_content-box {
+            .trainer_content-box_desc {
+               font-size: 30px;
+               line-height: 6rem;
+               width: 100%;
+            }
+            .trainer_content-box_name {
+               font-size: 50px;
+               text-align: center;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 500px) {
+   .trainer {
+      .container-trainer {
+         .trainer_img-box {
+            .shape3_base-color {
+               width: 30rem;
+               height: auto;
+            }
+            .trainer-img {
+               top: 3.1rem;
+               left: 3.5rem;
+               width: 23rem;
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,100 @@
+.subscribe {
+   background: $base-color;
+   width: 100%;
+   height: 100%;
+   padding: 10rem 0;
+   .container-subscribe {
+      @include display-flex;
+      flex-direction: column;
+      .subscribe_heading {
+         font-family: $header-font;
+         color: $white-color;
+         font-size: fontSize(heading);
+         margin-bottom: 5.8rem;
+      }
+      .subscribe_desc {
+         font-family: $desc-font;
+         color: $white-color;
+         font-size: fontSize(sub-heading);
+         text-align: center;
+         width: 60%;
+         margin-bottom: 3rem;
+      }
+      .subscribe_mail-btn {
+         @include display-flex;
+         justify-content: space-between;
+         width: 77rem;
+         height: 6.3rem;
+         background: #fff;
+         border-radius: 3rem;
+
+         .subscribe_email {
+            height: 100%;
+            border: none;
+            width: 65%;
+            font-family: $desc-font;
+            font-size: fontSize(footer-desc);
+            border-radius: 3rem;
+            padding-left: 1rem;
+         }
+
+         .subscribe_btn {
+            background: $white-color;
+            color: $base-color;
+            padding: 1rem 6rem;
+            border-radius: 3rem;
+            border: none;
+            font-family: $header-font;
+            font-size: fontSize(footer-desc);
+            cursor: pointer;
+            &:hover {
+               background: $menu-hover-color;
+               color: $menu-text-hover-color;
+            }
+         }
+      }
+   }
+}
+@media screen and (max-width: 1023px) {
+   .subscribe {
+      .container-subscribe {
+         .subscribe_heading {
+            font-size: 65px;
+            text-align: center;
+         }
+         .subscribe_desc {
+            width: 85%;
+         }
+         .subscribe_mail-btn {
+            width: 75rem;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .subscribe {
+      .container-subscribe {
+         .subscribe_mail-btn {
+            width: 100%;
+            height: 100%;
+            background: none;
+            border-radius: 3rem;
+            flex-direction: column;
+            align-items: unset;
+            gap: 3rem;
+
+            .subscribe_email {
+               width: 100%;
+               padding: 2rem 0 2rem 1rem;
+            }
+         }
+         .subscribe_heading {
+            font-size: 40px;
+         }
+         .subscribe_desc {
+            width: 100%;
+         }
+      }
+   }
+}

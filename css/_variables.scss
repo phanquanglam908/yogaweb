@@ -1,0 +1,31 @@
+// ===== Color =====
+$base-color: #6c9894;
+$lighter-color: #e2ede8;
+$menu-color: #444444;
+$menu-text-hover-color: #51605e;
+$menu-hover-color: #c7d9d5;
+$logo-background-color: #a7d7c5;
+$white-color: #f4f9f4;
+$bg-body-color: #e0e0e0;
+
+// ===== Font Family =====;
+$body-font: "Lato", sans-serif;
+$header-font: "Baloo Bhai", sans-serif;
+$desc-font: "Montserrat", sans-serif;
+
+// ===== Font size =====
+$font-size: (
+   "menu": 20px,
+   "biggest": 98px,
+   "smallest": 18px,
+   "heading": 75px,
+   "sub-heading": 29px,
+   "class-title": 36px,
+   "class-subtitle": 19px,
+   "circle-number": 65px,
+   "circle-desc": 23px,
+   "trainer-desc": 58px,
+   "footer-title": 33px,
+   "footer-desc": 25px,
+   "pricing-desc": 22px,
+);
